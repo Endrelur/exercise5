@@ -31,6 +31,6 @@ jobs:
       - name: Fuzzer and Sanetizer
         working-directory: build
         run: |
-          CC-clang cmake ..
+          CC=clang cmake ..
           make
           ./tests/utility_fuzzer_test -max_total_time=60 -detect_
